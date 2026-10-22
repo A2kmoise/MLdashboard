@@ -1,0 +1,11 @@
+#Virtual environment
+.venv/
+
+
+#IDE
+.marscode/
+.vscode/
+
+
+#Python cache and build
+__pycache__/
