@@ -14,4 +14,25 @@ def frequency_table(df):
     float_format='%.2f',
     justify='center'
     )
+  
+  
   return table_html
+
+def vehicles_over_5000_table(df):
+  price_filtered_df = df.loc[df.selling_price < 20000]   
+  
+  price_filtered_table_html = price_filtered_df.to_html(
+    classes="table table-bordered table-striped table-sm",
+    float_format='%.2f',
+    justify='center'
+  )
+  
+  return price_filtered_table_html
+
+def total_price_by_manufacturer(df):
+  total_price_table_html = df.groupby(['manufacturer', 'transmission'])[['selling_price']].sum().to_html(
+    classes="table table-bordered table-striped table-sm",
+    float_format='%.2f',
+    justify='center'
+  )
+  return total_price_table_html
