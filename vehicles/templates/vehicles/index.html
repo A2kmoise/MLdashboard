@@ -28,7 +28,13 @@ tabindex="0">
 <div id="dashboard-nav" class="list-group position-sticky top-
 0">
 <a class="list-group-item list-group-item-action"
-href="#frequency-table">Frequency Tables (One-way)
+href="#frequency-table-section">Frequency Tables (One-way)
+</a>
+<a class="list-group-item list-group-item-action"
+href="#vehicles-over-5000-section">Vehicles Under 20000
+</a>
+<a class="list-group-item list-group-item-action"
+href="#total-price-by-manufacturer-section">Price by Manufacturer and Transmission
 </a>
 </div>
 </div>
@@ -39,14 +45,11 @@ target="#dashboard-nav"
 data-bs-smooth-scroll="true" tabindex="0">
 <h1 class="text-center text-primary mb-4"> Vehicle Machine
 Learning Dashboard </h1>
-<div id="frequency-table" class="card shadow mb-5">
-<div class="card-header bg-info text-white">
-Frequency Tables (One-way)
-</div>
-<div class="card-body">
 {{ frequency_table|safe }}
-</div>
-</div>
+<br><br>
+{{ vehicles_over_5000_table|safe }}
+<br><br>
+{{ total_price_by_manufacturer_table|safe }}
 </div>
 </div>
 </div>
